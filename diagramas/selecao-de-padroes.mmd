@@ -1,0 +1,7 @@
+flowchart TD
+    P["Descrever problema real"] --> IA["IA sugere alternativas + esqueleto"]
+    IA --> Q{"Pessoa confirma problema comprovado?"}
+    Q -- não --> X["Rejeitar: risco de over-engineering"]
+    Q -- sim --> Y{"Benefício compensa complexidade?"}
+    Y -- não --> X
+    Y -- sim --> Z["Adotar, testar e registrar decisão"]

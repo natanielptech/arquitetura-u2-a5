@@ -1,0 +1,7 @@
+flowchart LR
+    COD["Código-fonte"] --> IA["IA rascunha C4 / Javadoc"]
+    IA --> EST["Estrutura técnica observável"]
+    IA -.-> INT["Intenção e restrições de negócio"]
+    EST --> H["Pessoa com contexto confirma e corrige"]
+    INT --> H
+    H --> PUB["Publicar + registrar apoio de IA"]

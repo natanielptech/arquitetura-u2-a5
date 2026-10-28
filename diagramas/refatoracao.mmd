@@ -1,0 +1,10 @@
+flowchart TD
+    A["Suíte verde: baseline"] --> B["IA sinaliza possíveis smells"]
+    B --> C["Pessoa prioriza após leitura crítica"]
+    C --> D["IA sugere refatoração pequena"]
+    D --> E["Aplicar um passo"]
+    E --> F{"Testes passam e comportamento foi preservado?"}
+    F -- sim --> G["Revisar diff + registrar origem"]
+    F -- não --> H["Reverter e investigar"]
+    H --> C
+    G --> C
