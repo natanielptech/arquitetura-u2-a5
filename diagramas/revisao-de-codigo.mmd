@@ -1,0 +1,13 @@
+sequenceDiagram
+    actor Dev as Pessoa desenvolvedora
+    participant Repo as Plataforma de PR
+    participant IA as Revisor por IA
+    actor Rev as Pessoa revisora
+    Dev->>Repo: abre PR
+    Repo->>IA: solicita primeira triagem
+    IA-->>Repo: comentários candidatos
+    Repo-->>Rev: PR + comentários para investigar
+    Rev->>Rev: valida contexto e evidências
+    Note over Rev: checkpoint humano obrigatório
+    Rev-->>Repo: aprova ou solicita mudanças
+    Repo->>Repo: merge após aprovação humana

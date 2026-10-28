@@ -1,0 +1,5 @@
+flowchart LR
+    IA["IA sugere<br/>(rascunho)"] --> V{"👤 Validação humana<br/>obrigatória"}
+    V -- aprovado --> OK["Adotar + registrar origem"]
+    V -- reprovado / dúvida --> R["Refinar prompt ou descartar"]
+    R --> IA
